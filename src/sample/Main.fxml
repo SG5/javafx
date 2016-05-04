@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane fx:controller="sample.FXMLExampleController"
+    xmlns:fx="http://javafx.com/fxml" alignment="CENTER" hgap="15" vgap="15">
+
+    <stylesheets>
+        <URL value="@Main.css"/>
+    </stylesheets>
+
+    <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+
+    <Text text="Привет" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+
+    <Label text="Логин" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <Label text="Пароль" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Text fx:id="actionResult" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.columnSpan="2"
+        stroke="RED"/>
+
+    <HBox spacing="10" alignment="BOTTOM_RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="2">
+        <Button text="Войти" onAction="#handleSubmitButtonAction" />
+    </HBox>
+
+</GridPane>
